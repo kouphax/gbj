@@ -1,0 +1,190 @@
+exercises:
+  flat-bench-press:
+    id: flat-bench-press
+    title: Flat Bench Press
+    focus: chest
+    alt: flat-bench-dumbbell-press
+
+  flat-bench-dumbbell-press:
+    id: flat-bench-dumbbell-press
+    title: Flat Bench Dumbbell Press
+    focus: chest
+    alt: flat-bench-press
+
+  decline-bench-press:
+    id: decline-bench-press
+    title: Decline Bench Press
+    focus: chest
+    alt: decline-dumbell-press
+
+  decline-dumbbell-press:
+    id: decline-dumbbell-press
+    title: Decline Dumbbell Press
+    focus: chest
+    alt: decline-bench-press
+
+  incline-dumbbell-press:
+    id: incline-dumbbell-press
+    title: Incline Dumbbell Press
+    focus: chest
+    alt: incline-bench-press
+
+  incline-bench-press:
+    id: incline-bench-press
+    title: Incline Bench Press
+    focus: chest
+    alt: incline-dumbbell-press
+
+  flat-bench-dumbell-fly:
+    id: flat-bench-dumbell-fly
+    title: Flat Bench Dumbell Fly
+    focus: chest
+    alt: chest-fly-w-machine
+
+  chest-fly-w-machine:
+    id: chest-fly-w-machine
+    title: Chest Fly w/ Machine
+    focus: chest
+    alt: flat-bench-dumbell-fly
+
+  preacher-curl:
+    id: preacher-curl
+    title: Preacher Curl
+    focus: biceps
+    alt: seated-dumbell-curl
+
+  seated-dumbell-curl:
+    id: seated-dumbell-curl
+    title: Seated Dumbbell Curl
+    focus: biceps
+    alt: preacher-curl
+
+  hammer-curl:
+    id: hammer-curl
+    title: Hammer Curl
+    focus: biceps
+
+  concentration-curl:
+    id: concentration-curl
+    title: Concentration Curl
+    focus: biceps
+
+  overhead-cable-curl:
+    id: overhead-cable-curl
+    title: Overhead Cable Curl
+    focus: biceps
+    alt: one-arm-at-a-time-cable-curl
+
+  one-arm-at-a-time-cable-curl:
+    id: one-arm-at-a-time-cable-curl
+    title: One Arm at a Time Cable Curl
+    focus: biceps
+    alt: overhead-cable-curl
+
+  pull-up:
+    id: pull-up
+    title: Pull-Up
+    focus: back
+    alt: assisted-pull-up-machine
+
+  assisted-pull-up-machine:
+    id: assisted-pull-up-machine
+    title: Assisted Pull-Up Machine
+    focus: back
+    alt: pull-up
+
+  t-bar-row:
+    id: t-bar-row
+    title: T-Bar Row
+    focus: back
+    alt: upper-back-rope-pull
+
+  upper-back-rope-pull:
+    id: upper-back-rope-pull
+    title: Upper Back Rope Pull
+    focus: back
+    alt: t-bar-row
+
+  lat-pulldown:
+    id: lat-pulldown
+    title: Lat Pulldown
+    focus: back
+
+  close-grip-cable-row:
+    id: close-grip-cable-row
+    title: Close Grip Cable Row
+    focus: back
+    alt: bent-over-dumbbell-row
+
+  bent-over-dumbbell-row:
+    id: bent-over-dumbbell-row
+    title: Bent Over Dumbbell Row
+    focus: back
+    alt: close-grip-cable-row
+
+  skull-crusher:
+    id: skull-crusher
+    title: Skull Crusher
+    focus: triceps
+    alt: close-grip-bench-press
+
+  close-grip-bench-press:
+    id: close-grip-bench-press
+    title: Close Grip Bench Press
+    focus: triceps
+    alt: skull-crusher
+
+  overhead-dumbbell-extension:
+    id: overhead-dumbbell-extension
+    title: Overhead Dumbbell Extension
+    focus: triceps
+
+  rope-pulldown:
+    id: rope-pulldown
+    title: Rope Pulldown
+    focus: triceps
+
+  dip:
+    id: dip
+    title: Dip
+    focus: triceps
+    alt: assisted-dip-or-seated-dip-w-machine
+
+  assisted-dip-or-seated-dip-w-machine:
+    id: assisted-dip-or-seated-dip-w-machine
+    title: Assisted Dip or Seated Dip w/ Machine
+    focus: triceps
+    alt: dip
+
+workouts:
+  workout-1:
+    id: workout-1
+    title: 'Workout 1: Back & Triceps'
+    focus:
+      - back
+      - triceps
+    exercises:
+      - pull-up
+      - t-bar-row
+      - lat-pulldown
+      - close-grip-cable-row
+      - skull-crusher
+      - overhead-dumbbell-extension
+      - rope-pulldown
+      - dip
+  workout-2:
+    id: workout-2
+    title: 'Workout 2: Chest & Biceps'
+    focus:
+      - chest
+      - biceps
+    exercises:
+      - flat-bench-press
+      - decline-bench-press
+      - incline-dumbbell-press
+      - flat-bench-dumbell-fly
+      - preacher-curl
+      - hammer-curl
+      - concentration-curl
+      - overhead-cable-curl
+
