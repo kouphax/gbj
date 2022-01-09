@@ -15,7 +15,7 @@ export default function Workout() {
       <Flexbox width="100px">
         <BackButton/>
       </Flexbox>
-      <Flexbox>
+      <Flexbox flex="1">
         <h1 style={{ width: '100%' }}>{workout.title}</h1>
       </Flexbox>
       <Flexbox width="100px"></Flexbox>
