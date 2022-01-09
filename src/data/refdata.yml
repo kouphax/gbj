@@ -285,6 +285,63 @@ exercises:
     focus: forearms
     alt: barbell-twist-up
 
+  straight-arm-pulldown:
+    id: straight-arm-pulldown
+    title: Straight Arm Pulldown
+    focus: back
+
+  arnold-dumbbell-press:
+    id: arnold-dumbbell-press
+    title: Arnold Dumbbell Press
+    focus: shoulders
+    alt: seated-dumbbell-press
+
+  rope-hammer-curl:
+    id: rope-hammer-curl
+    title: Rope Hammer Curl
+    focus: biceps
+
+  zottman-curl:
+    id: zottman-curl
+    title: Zottman Curl
+    focus: biceps
+
+  underhand-cable-curl:
+    id: underhand-cable-curl
+    title: Underhand Cable Curl
+    focus: biceps
+
+  incline-dumbbell-fly:
+    id: incline-dumbbell-fly
+    title: Incline Dumbbell Fly
+    focus: chest
+
+  cable-crossover:
+    id: cable-crossover
+    title: Cable Crossover
+    focus: chest
+
+  deadlift:
+    id: deadlift
+    title: Deadlift
+    focus: legs
+    alt: leg-press
+
+  bicycle-crunch:
+    id: bicycle-crunch
+    title: Bicycle Crunch
+    focus: abs
+
+  reverse-grip-lat-pulldown:
+    id: reverse-grip-lat-pulldown
+    title: Reverse Grip Lat Pulldown
+    focus: back
+
+  russian-twist:
+    id: russian-twist
+    title: Russian Twist
+    focus: abs
+
 workouts:
   workout-1:
     id: workout-1
@@ -346,4 +403,94 @@ workouts:
       - shrug
       - reverse-grip-ez-bar-curl
       - barbell-twist-up
-
+  workout-5:
+    id: workout-5
+    title: 'Workout 5: Back & Shoulders'
+    focus:
+      - back
+      - shoulders
+    exercises:
+      - lat-pulldown
+      - bent-over-dumbbell-row
+      - straight-arm-pulldown
+      - t-bar-row
+      - lateral-dumbbell-raise
+      - front-dumbbell-raise
+      - reverse-fly
+      - arnold-dumbbell-press
+  workout-6:
+    id: workout-6
+    title: 'Workout 6: Biceps & Triceps'
+    focus:
+      - biceps
+      - triceps
+    exercises:
+      - preacher-curl
+      - rope-hammer-curl
+      - zottman-curl
+      - underhand-cable-curl
+      - skull-crusher
+      - close-grip-bench-press
+      - rope-pulldown
+      - dip
+  workout-7:
+    id: workout-7
+    title: 'Workout 7: Chest & Forearms'
+    focus:
+      - chest
+      - forearms
+    exercises:
+      - flat-bench-press
+      - decline-bench-press
+      - incline-dumbbell-press
+      - incline-dumbbell-fly
+      - cable-crossover
+      - reverse-grip-ez-bar-curl
+      - barbell-twist-up
+  workout-8:
+    id: workout-8
+    title: 'Workout 8: Legs & Abs'
+    focus:
+      - legs
+      - abs
+    exercises:
+      - deadlift
+      - barbbell-squat
+      - quad-extension
+      - hamstring-extension
+      - calf-raise
+      - kneeling-cable-crunch
+      - hanging-leg-lift
+      - bicycle-crunch
+      - plank
+  workout-9:
+    id: workout-9
+    title: 'Workout 9: Back & Abs'
+    focus:
+      - back
+      - abs
+    exercises:
+      - pull-up
+      - close-grip-cable-row
+      - straight-arm-pulldown
+      - reverse-grip-lat-pulldown
+      - t-bar-row
+      - kneeling-cable-crunch
+      - leg-lift
+      - russian-twist
+      - plank
+  workout-10:
+    id: workout-10
+    title: 'Workout 10: Chest & Biceps'
+    focus:
+      - chest
+      - biceps
+    exercises:
+      - flat-bench-press
+      - decline-bench-press
+      - incline-dumbbell-press
+      - flat-bench-dumbell-fly
+      - preacher-curl
+      - zottman-curl
+      - hammer-curl
+      - concentration-curl

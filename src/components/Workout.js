@@ -7,10 +7,10 @@ import BackButton from './BackButton';
 export default function Workout() {
   const { id } = useParams();
   const { refdata: { exercises, workouts } } = useContext(RefdataContext);
+  const navigate = useNavigate();
   const workout = workouts[id];
   const allCompleted = (JSON.parse(localStorage.getItem('completed')) || []);
   const completed = allCompleted.includes(id);
-  const navigate = useNavigate();
 
   return <main>
     <Flexbox element="header" flexDirection="row" width="100%">
@@ -32,12 +32,14 @@ export default function Workout() {
           </article>
         </Link>)
     }
+
     {
       !completed && <div className="button" onClick={() => {
         localStorage.setItem('completed', JSON.stringify([...allCompleted, id]));
         navigate('/');
       } }>Mark as Done</div>
     }
+
     {
       completed && <div className="button" onClick={() => {
         localStorage.setItem('completed', JSON.stringify(allCompleted.filter((w) => w !== id)));
