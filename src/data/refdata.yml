@@ -156,6 +156,79 @@ exercises:
     focus: triceps
     alt: dip
 
+  leg-press:
+    id: leg-press
+    title: Leg Press
+    focus: legs
+
+  hack-squat:
+    id: hack-squat
+    title: Hack Squat
+    focus: legs
+    alt: weighted-lunge
+
+  weighted-lunge:
+    id: weighted-lunge
+    title: Weighted Lunge
+    focus: legs
+    alt: hack-squat
+
+  quad-extension:
+    id: quad-extension
+    title: Quad Extension
+    focus: legs
+
+  hamstring-extension:
+    id: hamstring-extension
+    title: Hamstring Extension
+    focus: legs
+
+  calf-raise:
+    id: calf-raise
+    title: Calf Raise
+    focus: legs
+    alt: seated-calf-press-machine
+
+  seated-calf-press-machine:
+    id: seated-calf-press-machine
+    title: Seated Calf Press Machine
+    focus: legs
+    alt: calf-raise
+
+  kneeling-cable-crunch:
+    id: kneeling-cable-crunch
+    title: Kneeling Cable Crunch
+    focus: abs
+    alt: ab-machine
+
+  ab-machine:
+    id: ab-machine
+    title: Ab Machine
+    focus: abs
+    alt: kneeling-cable-crunch
+
+  leg-lift:
+    id: leg-lift
+    title: Leg Lift
+    focus: abs
+    alt: hanging-leg-lift
+
+  hanging-leg-lift:
+    id: hanging-leg-lift
+    title: Hanging Leg Lift
+    focus: abs
+    alt: leg-lift
+
+  starfish-crunch:
+    id: starfish-crunch
+    title: Starfish Crunch
+    focus: abs
+
+  plank:
+    id: plank
+    title: Plank
+    focus: abs
+
 workouts:
   workout-1:
     id: workout-1
@@ -187,4 +260,20 @@ workouts:
       - hammer-curl
       - concentration-curl
       - overhead-cable-curl
+  workout-3:
+    id: workout-3
+    title: 'Workout 3: Legs & Abs'
+    focus:
+      - legs
+      - abs
+    exercises:
+      - leg-press
+      - hack-squat
+      - quad-extension
+      - hamstring-extension
+      - calf-raise
+      - kneeling-cable-crunch
+      - leg-lift
+      - starfish-crunch
+      - plank
 
