@@ -11,11 +11,11 @@ export default function Workout() {
   const workout = workouts[id];
 
   return <main>
-    <Flexbox element="header" flexDirection="row">
+    <Flexbox element="header" flexDirection="row" width="100%">
       <Flexbox width="100px">
         <BackButton/>
       </Flexbox>
-      <Flexbox flexGrow={1}>
+      <Flexbox>
         <h1 style={{ width: '100%' }}>{workout.title}</h1>
       </Flexbox>
       <Flexbox width="100px"></Flexbox>

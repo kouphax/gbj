@@ -5,9 +5,6 @@ const REP_RANGE = ['12-15', '10-12', '6-8', '4-6'];
 
 export default function Set({ index, sets, setSets }) {
   return <Flexbox element="main" flexDirection="row" alignItems="stretch" className="set-row">
-    {/* <Flexbox alignItems="top" flex="0.5"> */}
-    {/*   <h2>Set {index + 1}</h2> */}
-    {/* </Flexbox> */}
     <Flexbox flex="2">
       <div className="input-container">
         <div className="label">Reps ({REP_RANGE[index]}) (prev: {sets[index].reps.previous || 'n/a'}):</div>

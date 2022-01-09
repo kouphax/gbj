@@ -17,7 +17,6 @@ header {
 .item {
     width: 100%;
     border-bottom: 1px solid black;
-    padding: 1em;
 }
 
 a, a:visited, a:hover, a:active {
