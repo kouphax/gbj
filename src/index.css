@@ -75,3 +75,6 @@ input[type=number] {
     padding: 1em;
 }
 
+.done {
+    opacity: 0.5;
+}

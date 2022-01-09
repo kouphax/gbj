@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useContext } from 'react';
 import Flexbox from 'flexbox-react';
 import { RefdataContext } from '../data/context';
@@ -7,8 +7,10 @@ import BackButton from './BackButton';
 export default function Workout() {
   const { id } = useParams();
   const { refdata: { exercises, workouts } } = useContext(RefdataContext);
-
   const workout = workouts[id];
+  const allCompleted = (JSON.parse(localStorage.getItem('completed')) || []);
+  const completed = allCompleted.includes(id);
+  const navigate = useNavigate();
 
   return <main>
     <Flexbox element="header" flexDirection="row" width="100%">
@@ -29,6 +31,18 @@ export default function Workout() {
             </h2>
           </article>
         </Link>)
+    }
+    {
+      !completed && <div className="button" onClick={() => {
+        localStorage.setItem('completed', JSON.stringify([...allCompleted, id]));
+        navigate('/');
+      } }>Mark as Done</div>
+    }
+    {
+      completed && <div className="button" onClick={() => {
+        localStorage.setItem('completed', JSON.stringify(allCompleted.filter((w) => w !== id)));
+        navigate('/');
+      }}>Mark as Undone</div>
     }
   </main>;
 }
