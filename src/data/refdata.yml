@@ -229,6 +229,62 @@ exercises:
     title: Plank
     focus: abs
 
+  lateral-dumbbell-raise:
+    id: lateral-dumbbell-raise
+    title: Lateral Dumbbell Raise
+    focus: shoulders
+
+  front-dumbbell-raise:
+    id: front-dumbbell-raise
+    title: Front Dumbbell Raise
+    focus: shoulders
+
+  reverse-fly:
+    id: reverse-fly
+    title: Reverse Fly
+    focus: shoulders
+    alt: bent-over-rear-delt-raise
+
+  bent-over-rear-delt-raise:
+    id: bent-over-rear-delt-raise
+    title: Bent Over Rear Delt Raise
+    focus: shoulders
+    alt: reverse-fly
+
+  seated-dumbbell-press:
+    id: seated-dumbbell-press
+    title: Seated Dumbbell Press
+    focus: shoulders
+
+  shrug:
+    id: shrug
+    title: Shrug
+    focus: shoulders
+
+  reverse-grip-ez-bar-curl:
+    id: reverse-grip-ez-bar-curl
+    title: Reverse Grip EZ Bar Curl
+    focus: forearms
+    alt: reverse-grip-curl-w-dumbbells
+
+  reverse-grip-curl-w-dumbbells:
+    id: reverse-grip-curl-w-dumbbells
+    title: Reverse Grip Curl w/ Dumbbells
+    focus: forearms
+    alt: reverse-grip-ez-bar-curl
+
+  barbell-twist-up:
+    id: barbell-twist-up
+    title: Barbell Twist-Up
+    focus: forearms
+    alt: dumbbell-twist-up
+
+  dumbbell-twist-up:
+    id: dumbbell-twist-up
+    title: Dumbbell Twist-Up
+    focus: forearms
+    alt: barbell-twist-up
+
 workouts:
   workout-1:
     id: workout-1
@@ -276,4 +332,18 @@ workouts:
       - leg-lift
       - starfish-crunch
       - plank
+  workout-4:
+    id: workout-4
+    title: 'Workout 4: Shoulders & Forearms'
+    focus:
+      - shoulders
+      - forearms
+    exercises:
+      - lateral-dumbbell-raise
+      - front-dumbbell-raise
+      - reverse-fly
+      - seated-dumbbell-press
+      - shrug
+      - reverse-grip-ez-bar-curl
+      - barbell-twist-up
 
