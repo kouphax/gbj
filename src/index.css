@@ -7,7 +7,6 @@ html, body {
 
 * {
     font-family: 'Robot', sans-serif;
-    font-size: 90%;
 }
 
 header {
@@ -62,6 +61,7 @@ h2 .tag:first-child {
 
 .label {
     font-weight: lighter;
+    font-size: 90%;
     margin-bottom: 0.5em;
 }
 
