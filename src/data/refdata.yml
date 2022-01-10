@@ -342,6 +342,16 @@ exercises:
     title: Russian Twist
     focus: abs
 
+  diamond-push-up:
+    id: diamond-push-up
+    title: Diamond Push-Up
+    focus: triceps
+
+  barbell-raise:
+    id: barbell-raise
+    title: Barbell Raise
+    focus: shoulders
+
 workouts:
   workout-1:
     id: workout-1
@@ -494,3 +504,34 @@ workouts:
       - zottman-curl
       - hammer-curl
       - concentration-curl
+  workout-11:
+    id: workout-11
+    title: 'Workout 11: Triceps & Shoulders'
+    focus:
+      - triceps
+      - shoulders
+    exercises:
+      - skull-crusher
+      - close-grip-bench-press
+      - diamond-push-up
+      - rope-pulldown
+      - seated-dumbbell-press
+      - lateral-dumbbell-raise
+      - front-dumbbell-raise
+      - barbell-raise
+  workout-12:
+    id: workout-12
+    title: 'Workout 12: Legs & Abs'
+    focus:
+      - legs
+      - abs
+    exercises:
+      - leg-press
+      - hack-squat
+      - weighted-lunge
+      - hamstring-extension
+      - calf-raise
+      - kneeling-cable-crunch
+      - hanging-leg-lift
+      - bicycle-crunch
+      - plank
