@@ -6,6 +6,9 @@ import {
 } from '@mui/material';
 import { Fragment, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import RunCircleIcon from '@mui/icons-material/RunCircle';
+import DoneIcon from '@mui/icons-material/Done';
+import IconButton from '@mui/material/IconButton';
 import { RefdataContext } from '../data/context';
 
 export default function Workouts() {
@@ -18,10 +21,16 @@ export default function Workouts() {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Workouts
         </Typography>
+        <IconButton
+          size="large"
+          color="inherit"
+          aria-label="menu"
+          onClick={() => navigate('/exercises')}>
+          <RunCircleIcon />
+        </IconButton>
       </Toolbar>
     </AppBar>
     <Toolbar />
-
     <List >
       {
         Object.values(workouts)

@@ -38,7 +38,7 @@ function createSetState(id) {
   }
 
   return value;
-}ø;
+}
 
 export default function Exercise() {
   const navigate = useNavigate();
