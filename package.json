@@ -11,16 +11,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-yaml": "^2.1.0",
+    "@parcel/transformer-yaml": "^2.1.1",
     "eslint": "^8.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-react": "^7.28.0",
-    "parcel": "^2.1.0"
+    "parcel": "^2.1.1"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.7",
     "eslint-config-airbnb": "^19.0.4",
-    "flexbox-react": "^4.4.0",
     "prop-types": "^15.8.1",
     "ramda": "^0.27.1",
     "react": "^17.0.2",

@@ -1,8 +1,16 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useContext } from 'react';
-import Flexbox from 'flexbox-react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { Fragment, useContext } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import Typography from '@mui/material/Typography';
+import DoneIcon from '@mui/icons-material/Done';
+import ClearIcon from '@mui/icons-material/Clear';
+import {
+  Chip, List, ListItem, ListItemButton, ListItemText,
+} from '@mui/material';
 import { RefdataContext } from '../data/context';
-import BackButton from './BackButton';
 
 export default function Workout() {
   const { id } = useParams();
@@ -12,39 +20,70 @@ export default function Workout() {
   const allCompleted = (JSON.parse(localStorage.getItem('completed')) || []);
   const completed = allCompleted.includes(id);
 
-  return <main>
-    <Flexbox element="header" flexDirection="row" width="100%">
-      <Flexbox width="100px">
-        <BackButton/>
-      </Flexbox>
-      <Flexbox flex="1">
-        <h1 style={{ width: '100%' }}>{workout.title}</h1>
-      </Flexbox>
-      <Flexbox width="100px"></Flexbox>
-    </Flexbox>
-    {
-      workout.exercises.map((e) => exercises[e]).map((e) => <Link to={`/exercise/${e.id}`}>
-          <article key={e.id} className="item">
-            <h2>
-              {e.title}
-              <span key={e.focus} className="tag">{e.focus}</span>
-            </h2>
-          </article>
-        </Link>)
-    }
+  return <>
+    <AppBar position="fixed">
+      <Toolbar>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+          onClick={() => navigate('/')}>
+          <KeyboardBackspaceIcon />
+        </IconButton>
+        <Typography variant="h6" component="div" sx={{
+          flexGrow: 1,
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+        }}>
+          { workout.title }
+        </Typography>
+        { completed
+          ? <IconButton
+            size="large"
+            color="inherit"
+            aria-label="menu"
+            onClick={() => {
+              localStorage.setItem('completed', JSON.stringify(allCompleted.filter((w) => w !== id)));
+              navigate('/');
+            }}>
+            <ClearIcon/>
+          </IconButton>
+          : <IconButton
+            size="large"
+            color="inherit"
+            aria-label="menu"
+            onClick={() => {
+              localStorage.setItem('completed', JSON.stringify([...allCompleted, id]));
+              navigate('/');
+            }}>
+            <DoneIcon />
+          </IconButton>}
 
-    {
-      !completed && <div className="button" onClick={() => {
-        localStorage.setItem('completed', JSON.stringify([...allCompleted, id]));
-        navigate('/');
-      } }>Mark as Done</div>
-    }
+      </Toolbar>
+    </AppBar>
+    <Toolbar />
+    <List>
+      {
+        workout.exercises.map((e) => exercises[e]).map((e) => <>
+          <ListItem disablePadding>
+          <ListItemButton onClick={() => navigate(`/exercise/${e.id}`) }>
+            <ListItemText primary={
+                <Fragment>
+                  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    {e.title}
+                  </Typography>
+                </Fragment>
+              }
+              secondary={<Fragment><Chip size="small" label={e.focus} sx={{ mr: 1 }}/></Fragment>}
+            />
+          </ListItemButton>
+        </ListItem>
+        </>)
 
-    {
-      completed && <div className="button" onClick={() => {
-        localStorage.setItem('completed', JSON.stringify(allCompleted.filter((w) => w !== id)));
-        navigate('/');
-      }}>Mark as Undone</div>
-    }
-  </main>;
+      }
+    </List>
+  </>;
 }

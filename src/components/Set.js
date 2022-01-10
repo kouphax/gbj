@@ -1,37 +1,43 @@
-import Flexbox from 'flexbox-react';
 import PropTypes from 'prop-types';
+import { Grid, TextField, Typography } from '@mui/material';
 
 const REP_RANGE = ['12-15', '10-12', '6-8', '4-6'];
 
 export default function Set({ index, sets, setSets }) {
-  return <Flexbox element="main" flexDirection="row" alignItems="stretch" className="set-row">
-    <Flexbox flex="2">
-      <div className="input-container">
-        <div className="label">Reps ({REP_RANGE[index]}) (prev: {sets[index].reps.previous || 'n/a'}):</div>
-        <input type="number" value={sets[index].reps.current || ''} onChange={(e) => {
-          const newSets = [...sets];
-          newSets[index].reps = {
-            current: parseInt(e.target.value, 10),
-            previous: sets[index].reps.previous,
-          };
-          setSets(newSets);
-        }}/>
-      </div>
-    </Flexbox>
-    <Flexbox flex="2">
-      <div className="input-container">
-        <div className="label">Weight (prev: {sets[index].weight.previous || 'n/a'}):</div>
-        <input type="number" value={sets[index].weight.current || ''} onChange={(e) => {
-          const newSets = [...sets];
-          newSets[index].weight = {
-            current: parseInt(e.target.value, 10),
-            previous: sets[index].weight.previous,
-          };
-          setSets(newSets);
-        }}/>
-      </div>
-    </Flexbox>
-  </Flexbox>;
+  return <Grid container spacing={2}>
+    <Grid item xs={12}>
+      <Typography variant="h6">Set {index + 1}</Typography>
+    </Grid>
+    <Grid item xs={6}>
+      <Typography component="div" sx={{ mb: 1 }}>Reps ({REP_RANGE[index]}):</Typography>
+      <TextField label={`prev: ${sets[index].reps.previous || 'n/a'}`}
+                 variant="outlined"
+                 value={sets[index].reps.current || ''}
+                 onChange={(e) => {
+                   const newSets = [...sets];
+                   newSets[index].reps = {
+                     current: parseInt(e.target.value, 10),
+                     previous: sets[index].reps.previous,
+                   };
+                   setSets(newSets);
+                 }}/>
+    </Grid>
+    <Grid item xs={6}>
+      <Typography component="div" sx={{ mb: 1 }}>Weight:</Typography>
+      <TextField label={`prev: ${sets[index].weight.previous || 'n/a'}`}
+                 variant="outlined"
+                 value={sets[index].weight.current || ''}
+                 onChange={(e) => {
+                   const newSets = [...sets];
+                   newSets[index].weight = {
+                     current: parseInt(e.target.value, 10),
+                     previous: sets[index].weight.previous,
+                   };
+                   setSets(newSets);
+                 }}/>
+
+    </Grid>
+  </Grid>;
 }
 
 Set.propTypes = {
