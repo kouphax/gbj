@@ -14,6 +14,7 @@ export default function Set({ index, sets, setSets }) {
                  variant="outlined"
                  novalidate
                  inputMode="numeric"
+                 inputProps={{ inputMode: 'numeric' }}
                  value={sets[index].reps.current || ''}
                  onChange={(e) => {
                    const newSets = [...sets];
@@ -28,7 +29,7 @@ export default function Set({ index, sets, setSets }) {
       <Typography component="div" sx={{ mb: 1 }}>Weight:</Typography>
       <TextField label={`prev: ${sets[index].weight.previous || 'n/a'}`}
                  variant="outlined"
-                 inputMode="numeric"
+                 inputProps={{ inputMode: 'numeric' }}
                  novalidate
                  value={sets[index].weight.current || ''}
                  onChange={(e) => {
