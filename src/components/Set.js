@@ -12,11 +12,13 @@ export default function Set({ index, sets, setSets }) {
       <Typography component="div" sx={{ mb: 1 }}>Reps ({REP_RANGE[index]}):</Typography>
       <TextField label={`prev: ${sets[index].reps.previous || 'n/a'}`}
                  variant="outlined"
+                 novalidate
+                 pattern="\d*"
                  value={sets[index].reps.current || ''}
                  onChange={(e) => {
                    const newSets = [...sets];
                    newSets[index].reps = {
-                     current: parseInt(e.target.value, 10),
+                     current: e.target.value,
                      previous: sets[index].reps.previous,
                    };
                    setSets(newSets);
@@ -26,11 +28,13 @@ export default function Set({ index, sets, setSets }) {
       <Typography component="div" sx={{ mb: 1 }}>Weight:</Typography>
       <TextField label={`prev: ${sets[index].weight.previous || 'n/a'}`}
                  variant="outlined"
+                 pattern="\d*"
+                 novalidate
                  value={sets[index].weight.current || ''}
                  onChange={(e) => {
                    const newSets = [...sets];
                    newSets[index].weight = {
-                     current: parseInt(e.target.value, 10),
+                     current: e.target.value,
                      previous: sets[index].weight.previous,
                    };
                    setSets(newSets);

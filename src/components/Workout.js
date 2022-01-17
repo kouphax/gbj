@@ -19,6 +19,13 @@ export default function Workout() {
   const workout = workouts[id];
   const allCompleted = (JSON.parse(localStorage.getItem('completed')) || []);
   const completed = allCompleted.includes(id);
+  const exerciseDoneToday = (eid) => {
+    const stored = JSON.parse(localStorage.getItem(`exercise-${eid}`));
+    const today = new Date().toISOString().substring(0, 10);
+    return stored && Object.keys(stored)
+      .filter((k) => k.startsWith(today))
+      .length > 0;
+  };
 
   return <>
     <AppBar position="fixed">
@@ -68,7 +75,7 @@ export default function Workout() {
     <List>
       {
         workout.exercises.map((e) => exercises[e]).map((e) => <>
-          <ListItem disablePadding>
+          <ListItem disablePadding selected={exerciseDoneToday(e.id)}>
           <ListItemButton onClick={() => navigate(`/exercise/${e.id}`) }>
             <ListItemText primary={
                 <Fragment>
